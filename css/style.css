@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+*,*::before,*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,95 +15,49 @@ a {
 
 html {
     font-size: 62.5%;
-    letter-spacing: 1px;
 }
-
-body {
-    background-color:#786;
+body{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #85c4eb;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+} 
+.fa-bell{
+    font-size: 15rem;
+    background:linear-gradient(rgb(252, 39, 191),rgb(42, 18, 18));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.bell-notification{
+    color: #fff;
+    position: relative;
+    font-size: 2.2rem;
+    transition: 0.5s ease-in-out;
+    animation: bell 1s linear infinite alternate-reverse;
+    transform-origin: top;
+}
+@keyframes bell{
+    0%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
+.bell-notification::before{
+    content: attr(current-number-count-down);
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    right: -10%;
+    border-radius: 50%;
+    background-color: #f00;
+    border: 10px solid #85c4eb;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    line-height: 1;
-    font-family: 'Oswald', sans-serif;
 }
-.card {
-    min-width: 300px;
-    width: 470px;
-    height: 270px;
-    position: relative;
-    background:linear-gradient(45deg,#0c0200,#2f3131);
-    border-radius: 20px;
-    box-shadow: 0px 3px 10px -2px rgba(255, 250, 250, 0.943);
-    padding-left: 20px;
-    color: #fff;
-}
-.card img {
-    height: 260px;
-    width: 360px;
-    max-width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transition:0.5s ease-in-out;
-}
-
-.card .content h2{
-    margin-top: 20px;
-    text-transform: uppercase;
-    color: rgb(255, 32, 32);
-    font-size: 3.5rem;
-    line-height: 4rem;
-    letter-spacing: 2px;
-    word-spacing: 3px;
-    padding-bottom: 12px;
-    font-weight: bold;
-    transition:0.5s ease-in-out;
-}
-.card .content p,a{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.card .content p{
-    width: 200px;
-    margin-bottom: 20px;
-    text-transform: capitalize;
-    font-size: 12px;
-    line-height: 14px;
-    transition:0.5s ease-in-out;
-    opacity: 0;
-}
-.card .content a{
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: capitalize;
-    background: rgb(245, 225, 0);
-    padding: 4px 10px;
-    color: rgb(43, 52, 50);
-    border-radius: 6px;
-    border: 1px double #158dea;
-    font-weight: bold;
-    transition:0.5s ease-in-out;
-    cursor: pointer;
-    opacity: 0;
-}
-.card .content a:hover{
-    color: rgb(43, 52, 50) !important;
-    background:#fff !important ;
-}
-.card:hover img{
-    left: 80%;
-    top: 70%;
-    height: 280px;
-}
-.card:hover h2{
-    font-size: 40px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-.card:hover p,
-.card:hover a{
-    opacity: 1;
-}
-
