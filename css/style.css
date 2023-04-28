@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 ul li {
@@ -15,57 +14,64 @@ a {
     text-decoration: none;
     outline: none;
 }
-p,ul,li,a,h1,h2,h3,h4,h5,h6,ol{
-    margin: 0;
-    padding: 0;
-}
 
 html {
     font-size: 62.5%;
     letter-spacing: 1px;
 }
+
 body {
-    line-height: 1;
-}
-.center-div{
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    background: rgb(209, 174, 130);   
+    line-height: 1;
+    background: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.center-div .center-loading{
-    width:15rem;
-    height:15rem;
+
+.circle {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5rem #f00;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: #2ba9f7;
+    box-shadow: 0 0 0 5rem #f00;
     position: relative;
-    /* background: #5b6943; */
 }
-.center-div .center-loading span {
+.arrow{
     position: absolute;
+    width: 1rem;
+    height: 1rem;
     top: 0px;
     left: 0px;
-    width:5rem;
-    height:5rem;
-    background: #f74388;
-    animation: load 2s linear infinite;
-    transition:0.5s ease-in-out;
-    box-shadow: 2px 4px 10.53px 6px #c27a7270;
+    /* background-color: #fff; */
+    border: 9rem solid transparent;
+    border-top: 8rem solid #fff;
 }
-.center-div .center-loading span:nth-child(2) {
-    animation-delay: 0.67s;
+.arrow:first-child{
+    top: 5.5rem;
+    left: 1rem;
 }
-.center-div .center-loading span:nth-child(3) {
-    animation-delay: 1.32s;
+.arrow:nth-child(2)
+{
+    transform: rotate(68deg);
+    left: -3.5rem;
+    top: 3.5rem;
 }
-@keyframes load {
-    0%{top: 0px;left: 0px;}
-    12.5%{top: 0px;left: 50%;}
-    25%{top: 0px; left: 50%;}
-    37.5%{top: 50%; left: 50%;}
-    50%{top: 50%; left: 50%;}
-    62.5%{left: 0px;top: 50%;}
-    75%{left: 0px;top: 50%;}
-    87.5%{left: 0px;top: 0%;}
-    100%{top: 0px;left: 0px;}
-
+.arrow:last-child{
+    transform: rotate(-68deg);
+    left: 5.5rem;
+    top: 3.5rem;
 }
