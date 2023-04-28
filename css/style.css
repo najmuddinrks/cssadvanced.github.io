@@ -1,7 +1,10 @@
-*,*::before,*::after{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 ul li {
@@ -12,52 +15,57 @@ a {
     text-decoration: none;
     outline: none;
 }
+p,ul,li,a,h1,h2,h3,h4,h5,h6,ol{
+    margin: 0;
+    padding: 0;
+}
 
 html {
     font-size: 62.5%;
+    letter-spacing: 1px;
 }
-body{
+body {
+    line-height: 1;
+}
+.center-div{
     display: grid;
     place-items: center;
     width: 100vw;
     height: 100vh;
-    background: #85c4eb;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    overflow-x: hidden;
-} 
-.fa-bell{
-    font-size: 15rem;
-    background:linear-gradient(rgb(252, 39, 191),rgb(42, 18, 18));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    background: rgb(209, 174, 130);   
 }
-.bell-notification{
-    color: #fff;
+.center-div .center-loading{
+    width:15rem;
+    height:15rem;
     position: relative;
-    font-size: 2.2rem;
-    transition: 0.5s ease-in-out;
-    animation: bell 1s linear infinite alternate-reverse;
-    transform-origin: top;
+    /* background: #5b6943; */
 }
-@keyframes bell{
-    0%{
-        transform: rotate(-20deg);
-    }
-    100%{
-        transform: rotate(20deg);
-    }
-}
-.bell-notification::before{
-    content: attr(current-number-count-down);
-    width: 60px;
-    height: 60px;
+.center-div .center-loading span {
     position: absolute;
     top: 0px;
-    right: -10%;
-    border-radius: 50%;
-    background-color: #f00;
-    border: 10px solid #85c4eb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0px;
+    width:5rem;
+    height:5rem;
+    background: #f74388;
+    animation: load 2s linear infinite;
+    transition:0.5s ease-in-out;
+    box-shadow: 2px 4px 10.53px 6px #c27a7270;
+}
+.center-div .center-loading span:nth-child(2) {
+    animation-delay: 0.67s;
+}
+.center-div .center-loading span:nth-child(3) {
+    animation-delay: 1.32s;
+}
+@keyframes load {
+    0%{top: 0px;left: 0px;}
+    12.5%{top: 0px;left: 50%;}
+    25%{top: 0px; left: 50%;}
+    37.5%{top: 50%; left: 50%;}
+    50%{top: 50%; left: 50%;}
+    62.5%{left: 0px;top: 50%;}
+    75%{left: 0px;top: 50%;}
+    87.5%{left: 0px;top: 0%;}
+    100%{top: 0px;left: 0px;}
+
 }
