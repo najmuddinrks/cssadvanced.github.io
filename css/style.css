@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 ul li {
@@ -21,31 +22,25 @@ html {
 }
 
 body {
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    background: rgb(235, 212, 184);
+}
+
+.main-div {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    line-height: 1;
-    background: antiquewhite;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.coffee-mug {
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    background-color: rgb(46, 23, 17);
-    box-shadow: 0px 0px 0px 15px #442918, 0px 0px 0px 30px #3c2415,0px 0px 0px 50px #fe9407,0px 0px 0px 70px #feaa3a,0px 120px 0px -12px #442918,100px 80px 0px -15px #442918,80px 150px 0px -10px #442918,0px 300px 0px -100px #442918,45px 330px 0px -115px #442918;
+.center-div {
+    width: 50vw;
+    height: calc(100vh - 50vh);
+    box-shadow: 2px 2px 13px 0px #3b473b70, 1px 3px 10.53px -0.12rem #434b4d50, 0px 0px 20px 0px #4f464f30;
+    background: #158dea;
     position: relative;
-}
-.coffee-mug::before {
-    position: absolute;
-    top: -78px;
-    right: -74px;
-    content: '';
-    width: 60px;
-    height: 85px;
-    background-color: #f79c25;
-    transform: rotate(45deg);
+    cursor: pointer;
 }
