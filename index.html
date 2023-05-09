@@ -4,17 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css-loader</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>pulsing</title>
+    <style>
+            *,*::before,*::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+
+        html {
+            font-size: 62.5%;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: #85c4eb;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+        a{
+            text-decoration: none;
+            outline: none;
+            font-size: 2.2rem;
+            color: rgb(187, 246, 128);
+            padding: 10px 25px;
+            text-transform: uppercase;
+            background: #21110f;
+            border-radius: 30px;
+            position: relative;
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            text-decoration: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            font-size: 2.2rem;
+            color: rgb(187, 246, 128);
+            text-transform: uppercase;
+            background: #2c4c6c;
+            border-radius: 30px;
+            z-index: -1;
+            transition: 0.5s ease-in-out;
+        }
+        a:hover:before{
+            transform: scale(1.1,1.4);
+            opacity: 0;
+        }
+        a:hover{
+            box-shadow: 0px 10px 15px #0007;
+            transform: translateY(-5px);
+        }
+        a:active{
+            box-shadow: 0px 7px 8px #0005;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-    <div class="main-div">
-        <div class="center-div">
-            <span class="loader"></span>
-        </div>
-    </div>
+    <a href="#">Realking Ring</a>
 </body>
 </html>
