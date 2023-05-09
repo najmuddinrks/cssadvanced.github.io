@@ -4,50 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>background-color</title>
-    <style>
-         *,*::before,*::after{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-        body{
-            display: grid;
-            place-items: center;
-            width: 100vw;
-            height: 100vh;
-            animation: change-bg ease-in-out 10s infinite;
-            /* background: antiquewhite; */
-        }
-        @keyframes change-bg {
-            0%{
-                background: #158dea;
-            }
-            25%{
-                background: #15ea43;
-            }
-            50%{ background: #f12066;}
-            75%{ background: #fad20b;}
-            100%{ background: #441e13;}
-        } 
-        ul li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            outline: none;
-        }
-
-        html {
-            font-size: 62.5%;
-            height: 100%;
-        }
-        
-    </style>
+    <title>clash of clane</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>welcome to my world...</h1>
+    <div class="main-div">
+        <div class="center-div">
+            <div class="main-card">
+                <div class="card-body">
+                    <img src="./images/barbarian-removebg-preview.png" alt="barbarian">
+                </div>
+                <div class="card-content">
+                    <h3>level 1</h3>
+                    <h1>the barbarian</h1>
+                    <p>barbarian, word derived from the Greek bárbaros, used among the early Greeks to describe all foreigners, including the Romans. The word is probably onomatopoeic in origin, the “bar bar” sound representing the perception by Greeks of languages other than their own.</p>
+                    <!-- <a href="javascript:void(0)">view more..</a> -->
+                </div>
+                <div class="card-score-game">
+                    <div class="card-adjustment">
+                        <p class="score-number">16</p>
+                        <p class="score-list">speed</p>
+                    </div>
+                    <div class="card-adjustment">
+                        <p class="score-number">20<sup>s</sup></p>
+                        <p class="score-list">training</p>
+                    </div>
+                    <div class="card-adjustment">
+                        <p class="score-number">0.4</p>
+                        <p class="score-list">range</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
