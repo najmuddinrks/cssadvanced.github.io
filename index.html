@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>envelope</title>
+    <title>show-hide-effect</title>
     <style>
-           *,*::before,*::after{
+          *,*::before,*::after{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -16,65 +16,11 @@
             list-style: none;
         }
 
-        a{
+        a {
             text-decoration: none;
             outline: none;
-            padding: 12px 22px;
-            text-transform: uppercase;
-            color: #fff;
-            font-weight: bold;
-            font-size: 2rem;
-            cursor: pointer;
-            position: relative;
-            background: #092638;
         }
-        a::before{
-            content: 'RKS ENVELOPE';
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            text-decoration: none;
-            outline: none;
-            padding: 12px 22px;
-            text-transform: uppercase;
-            color: #fff;
-            font-weight: bold;
-            font-size: 2rem;
-            background: #c60d0d;
-            /* opacity: 0; */
-            transform: rotatex(270deg);
-            transform-origin: top;
-            transition: 0.5s ease-in-out;
-        }
-        a:hover:before{
-            /* opacity: 1; */
-            transform: rotatex(0deg);
 
-        }
-        a::after{
-            content: 'RKS ENVELOPE';
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            text-decoration: none;
-            outline: none;
-            padding: 12px 22px;
-            text-transform: uppercase;
-            color: #fff;
-            font-weight: bold;
-            font-size: 2rem;
-            background: #388806;
-            /* opacity: 0; */
-            transform: rotatex(270deg);
-            transform-origin: bottom;
-            transition: 0.5s ease-in-out;
-            transition-delay: 0.3s;
-        }
-        a:hover::after{
-            /* opacity: 1; */
-            transform: rotatex(0deg);
-
-        }
         html {
             font-size: 62.5%;
         }
@@ -86,9 +32,48 @@
             background: #85c4eb;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         } 
+        .main-div{
+            width: 600px;
+            height: 300px;
+            padding: 30px;
+            background: #786;
+            border-radius: 10px;
+            box-shadow: 0px 1px 10.53px #000;
+            clip-path: circle(20.4% at 100% 0);
+            transition: 0.5s ease-in-out;
+        }
+        .main-div:hover{
+            clip-path: circle(141.4% at 100% 0);
+        }
+        .main-div h1{
+            margin:30px 0px 10px 0px;
+            color: #fff;
+            font-size: 3rem;
+            text-align: center;
+            text-transform: capitalize;
+            border-bottom: 2px solid #f00;
+            padding: 0px 0px 10px 0px;
+        }
+        .main-div p{
+            color: bisque;
+            padding: 10px 0px;
+            line-height: 150%;
+            font-size: 1rem;
+        }
+        .main-div h3{
+            color: cornsilk;
+            margin-top: 22px;
+            font-size: 2rem;
+        }
     </style>
 </head>
 <body>
-    <a href="#">rks envelope</a>
+    <div class="main-div">
+        <h1>plz subscribe to Realking Studies</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos iure soluta explicabo quasi veniam inventore voluptas, vel minus mollitia ipsum recusandae consequatur, fugiat aperiam suscipit neque, tempore deserunt veritatis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos iure soluta explicabo quasi veniam inventore voluptas, vel minus mollitia ipsum recusandae consequatur, fugiat aperiam suscipit neque, tempore deserunt veritatis.
+        </p>
+        <h3>welcome to the best priority in the world</h3>
+    </div>
 </body>
 </html>
