@@ -4,24 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clip path</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700;900&display=swap"
-    rel="stylesheet">
+    <title>envelope</title>
+    <style>
+           *,*::before,*::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            outline: none;
+            padding: 12px 22px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2rem;
+            cursor: pointer;
+            position: relative;
+            background: #092638;
+        }
+        a::before{
+            content: 'RKS ENVELOPE';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            text-decoration: none;
+            outline: none;
+            padding: 12px 22px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2rem;
+            background: #c60d0d;
+            /* opacity: 0; */
+            transform: rotatex(270deg);
+            transform-origin: top;
+            transition: 0.5s ease-in-out;
+        }
+        a:hover:before{
+            /* opacity: 1; */
+            transform: rotatex(0deg);
+
+        }
+        a::after{
+            content: 'RKS ENVELOPE';
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            text-decoration: none;
+            outline: none;
+            padding: 12px 22px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2rem;
+            background: #388806;
+            /* opacity: 0; */
+            transform: rotatex(270deg);
+            transform-origin: bottom;
+            transition: 0.5s ease-in-out;
+            transition-delay: 0.3s;
+        }
+        a:hover::after{
+            /* opacity: 1; */
+            transform: rotatex(0deg);
+
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: #85c4eb;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+    </style>
 </head>
 <body>
-    <div class="main-div">
-        <div class="center-div-card">
-            <div class="top-div-card-body">
-                <h2>credit</h2>
-                <h1>visa</h1>
-            </div>
-            <div class="bottom-div-card-body">
-                <h2>najmuddin shaikh</h2>
-                <p>5045 - 6548 - 2565 - 1325</p>
-            </div>
-        </div>
-    </div>
+    <a href="#">rks envelope</a>
 </body>
 </html>
