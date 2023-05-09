@@ -21,15 +21,31 @@ html {
 }
 
 body {
-    background-color: rgb(255, 161, 47);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
     line-height: 1;
-    font-family: 'Roboto', sans-serif;
+    background: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-img {
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
+.coffee-mug {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: rgb(46, 23, 17);
+    box-shadow: 0px 0px 0px 15px #442918, 0px 0px 0px 30px #3c2415,0px 0px 0px 50px #fe9407,0px 0px 0px 70px #feaa3a,0px 120px 0px -12px #442918,100px 80px 0px -15px #442918,80px 150px 0px -10px #442918,0px 300px 0px -100px #442918,45px 330px 0px -115px #442918;
+    position: relative;
+}
+.coffee-mug::before {
+    position: absolute;
+    top: -78px;
+    right: -74px;
+    content: '';
+    width: 60px;
+    height: 85px;
+    background-color: #f79c25;
+    transform: rotate(45deg);
 }
