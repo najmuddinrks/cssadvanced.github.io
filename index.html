@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>caret</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700;900&display=swap"
-      rel="stylesheet">
+    <title>background-color</title>
+    <style>
+         *,*::before,*::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            animation: change-bg ease-in-out 10s infinite;
+            /* background: antiquewhite; */
+        }
+        @keyframes change-bg {
+            0%{
+                background: #158dea;
+            }
+            25%{
+                background: #15ea43;
+            }
+            50%{ background: #f12066;}
+            75%{ background: #fad20b;}
+            100%{ background: #441e13;}
+        } 
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        html {
+            font-size: 62.5%;
+            height: 100%;
+        }
+        
+    </style>
 </head>
 <body>
-    <div class="caret"></div>
+<h1>welcome to my world...</h1>
 </body>
 </html>
