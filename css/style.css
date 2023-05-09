@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
 }
 
 ul li {
@@ -22,119 +21,15 @@ html {
 }
 
 body {
-    /* background-color: rgb(82, 146, 214); */
-  
-    /* width: 100vw;
-    height: 100vh; */
-    line-height: 1;
-}
-.main-div{
-    /* display: flex;
+    background-color: rgb(255, 161, 47);
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    
-    background: url("../images/1.jpg") no-repeat;
-    width: 100%;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
-    background-size: 100% 100%;
-    position: relative;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
 }
-.center-div{
-width:280px;
-height:auto;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-border-radius: 16px;
-text-align: center;
-box-shadow: -1px 15px 30px -10px #000;
-}
-.main-card {
-    width: 280px;
-    height: 430px;
-    position: relative;
-    cursor: pointer;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px -2px rgba(255, 250, 250, 0.943);
-    border-top-right-radius:16px ;
-    border-top-left-radius:16px ;
-}
-.card-body {
-    width:280px;
-    height:250px;
-    /* position: relative; */
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(to left,#67624c,#767c6e);
-    border-top-right-radius:16px ;
-    border-top-left-radius:16px ;
-}
-.card-body img {
-    width:450px;
-    height:310px;
-    margin-right: -50px;
-}
-.card-content {
-    padding: 30px 15px;
-}
-.card-content h3{
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #f00;
-    letter-spacing: 2px;
-}
-.card-content h1{
-    text-transform: uppercase;
-    font-weight: bolder;
-    word-spacing: 3px;
-    font-size: 20px;
-    padding: 5px 0px 0px 0px;
-}
-.card-content p{
-    padding-top: 10px;
-    font-size: 8px;
-    color: #a6a6a9;
-}
-/* .card-content a{
-    font-size: 10px;
-    text-transform: capitalize;
-    color: #f00;
-    background: #158dea;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5px auto;
-    text-align: left;
-} */
-.card-score-game{
-    width: 100%;
-    height: auto;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    /* position: absolute;
-    top: 196px; */
-    background: orangered;
-    border-bottom-right-radius:16px ;
-    border-bottom-left-radius:16px ;
-}
-.card-score-game .card-adjustment{
-    padding: 10px 0px;
-    color: #fff;
-    flex-grow: 1;
-    border-right: 1px solid #fff;
-}
-.card-score-game .card-adjustment:last-child{
-    border-right: none;
-}
-.card-score-game .card-adjustment .score-number{
-    font-size: 25px;
-    font-weight: bold;
-    padding-bottom: 3px;
-}
-.card-score-game .card-adjustment .score-list{
-    text-transform: uppercase;
-    font-size: 11px;
+img {
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
