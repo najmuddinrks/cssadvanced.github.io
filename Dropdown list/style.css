@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.menu ul {
+	list-style: none;
+	margin: 0 auto;
+}
+.menu ul li{
+	position: relative;
+	background: #0d1445;
+	width: 200px;
+	padding: 15px;
+	border-right: 5px solid #f7ba27;
+	border-top: 1px dotted #999;
+	font-family: calibri;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+.menu ul li:hover,.menu ul li.active{
+	background: #162fe5;
+}
+.menu ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+.menu ul li ul{
+	opacity: 0;
+	position: absolute;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+	left: 195px;
+	top: -1px;
+}
+.menu ul li:hover ul{
+	visibility: visible;
+	opacity: 1;
+}
