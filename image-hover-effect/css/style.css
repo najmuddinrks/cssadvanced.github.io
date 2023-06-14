@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    line-height: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.center-div {
+    width: 60%;
+    height: 60rem;
+    background-color: bisque;
+    border-radius: 2rem;
+    box-shadow: 0px 0.7rem 3rem 0px #0002;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.clip {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    top: 0px;
+    left: 0px;
+    border-radius: 2rem;
+    box-shadow: 0px 0.5rem 1.5rem 0px #0002;
+    transition: 0.5s ease-in-out;
+}
+
+.img1 {
+    background: url("../images/beauty.jpg") no-repeat;
+    background-position: center;
+    background-size: contain;
+    clip-path: polygon(23% 0, 77% 0, 71% 100%, 33% 100%);
+}
+.img2 {
+    background: url("../images/christmas.jpg") no-repeat;
+    background-position: right;
+    background-size: contain;
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 57% 100%);
+}
+.img3{
+    background: url("../images/tree.jpg") no-repeat;
+    background-position: left;
+    background-size: contain;
+    clip-path: polygon(0 0, 29% 0, 41% 100%, 0 100%);
+}
+.center-div:hover .clip {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.center-div .clip:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+    background-size: contain;
+}
