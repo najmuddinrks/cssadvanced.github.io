@@ -1,0 +1,82 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    font-size: 8rem;
+    letter-spacing: 0.3rem;
+    background:linear-gradient( #158dea,rgb(6, 18, 255),rgb(57, 186, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    padding: 2rem 3.6rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    /* animation: slide 3s linear infinite alternate-reverse; */
+}
+/* @keyframes slide {
+    0%{
+        color:#f00 ;
+    }
+    50%{
+        color:green ;
+    }
+    100%{
+        color:blue ;
+    }
+} */
+a::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #1d0808;
+    z-index: -1;
+    top: -5%;
+    left: -1rem;
+    transform: skewX(38deg);
+    transition: 0.5s ease-in-out;
+}
+a:hover::before {
+    top: 0;
+    left: 0;
+    transform: skewX(0deg);
+}
+a::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #185008;
+    z-index: -1;
+    top: 5%;
+    left: 50%;
+    transform: skewX(38deg);
+    transition: 0.5s ease-in-out;
+}
+a:hover::after {
+    top: 0;
+    left: 50%;
+    transform: skewX(0deg);
+}
+
+html {
+    font-size: 62.5%;
+}
+body{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
