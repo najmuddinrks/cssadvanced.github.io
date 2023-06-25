@@ -1,0 +1,49 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+body{
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: antiquewhite;
+}
+h1 {
+    font-size: 10rem;
+    line-height: 11rem;
+    color: #158dea;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 3px;
+}
+h1::before {
+    content: 'REALKING';
+    position: absolute;
+    top:0%;
+    left:0%;
+    width: 00%;
+    overflow: hidden;
+    color: #033417;
+    transition:0.5s ease-in-out;
+}
+h1:hover::before {
+    width: 100%;
+    text-shadow: 3px 3px 4px #2d3436;
+}
