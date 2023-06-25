@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.box {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    background-color: #786;
+    box-shadow: 1px 1px 5px 0px #000;
+    border-radius: 10px;
+}
+.box h1{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.box .inputBox {
+    position: relative;
+}
+.box .inputBox input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+.box .inputBox label{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    transition: 0.5s ease-in-out;
+    text-transform: capitalize;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+    top: -20px;
+    left: 0px;
+    color: #158dea;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.box input[type="submit"]{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background: #158dea;
+    text-transform: uppercase;
+}
