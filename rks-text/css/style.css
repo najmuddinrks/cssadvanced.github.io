@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #04082f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 5rem;
+    font-weight: bold;
+    border: 5px solid #0062c4;
+    padding: 40px 80px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #ffa303;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    transition:0.5s ease-in-out;
+}
+a:hover::before {
+    transform: rotate(0deg);
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #786;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    line-height: 1;
+    font-family: 'Heebo', sans-serif;
+}
