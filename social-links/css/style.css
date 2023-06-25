@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: antiquewhite;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 50%;
+    background: #E1F0F0;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 1px 4px 2px 2px #C9D4D4;
+    margin: 10px 20px;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+a i {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.fa-youtube {
+    color: #FF0000;
+}
+
+.fa-linkedin {
+    color: #0072b1;
+}
+
+a i {
+    transition: 0.5s ease-in-out;
+}
+
+a:hover .fa {
+    top: 40%;
+    left: 40%;
+    transform: scale(1.2);
+    color: #E1F0F0;
+}
+
+a::before {
+    position: absolute;
+    top: 90%;
+    left: -50%;
+    content: '';
+    width: 120%;
+    height: 120%;
+    background: #006dea;
+    transform: rotate(60deg);
+    transition: 0.5s ease-in-out;
+}
+
+a:hover::before {
+    animation: socialicon 0.8s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes socialicon {
+    0% {
+        top: 90%;
+        left: -50%;
+    }
+
+    50% {
+        top: -60%;
+        left: -10%;
+    }
+
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
