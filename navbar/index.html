@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+         *,*::before,*::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: #143245;
+        }
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        ul li a{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 2rem;
+            text-transform: capitalize;
+            color: #baba00;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 0px 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        ul li a::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            border-top: 2px solid #baba00;
+            border-left: 2px solid #baba00 ;
+            transition: 0.5s ease-in-out;
+            transform-origin: left;
+            box-sizing: border-box;
+        }
+        ul li a:hover:before{
+            width: 10%;
+            height: 20%;
+            transform: rotate(360deg);
+        }
+        ul li a::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            border-bottom: 2px solid #baba00;
+            border-right: 2px solid #baba00 ;
+            transition: 0.5s ease-in-out;
+            transform-origin: left;
+            box-sizing: border-box;
+        }
+        ul li a:hover:after{
+            width: 10%;
+            height: 20%;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
