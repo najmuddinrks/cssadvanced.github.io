@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    line-height: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* background: rgb(42, 37, 31); */
+}
+.main-div{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)) ,url("..//images/home.jpg") no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+}
+.main-div .rain{
+    height: 100vh;
+    background: url("../images/rain-over-me.png") repeat;
+    /* background-size: 100% 100%; */
+    animation: rain 0.11s linear infinite alternate-reverse;
+    animation-fill-mode:forwards ;
+    transition:0.5s ease-in-out;
+}
+@keyframes rain {
+    0%{background-position:0% 0% ;}
+    50%{background-position: 10% -30%;}
+    100%{background-position:20% 100% ;}
+}
