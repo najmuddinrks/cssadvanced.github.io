@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    /* background: rgb(235, 212, 184); */
+}
+
+.main-div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url("../images/matrix.jpg") no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+}
+/* .center-div{
+    width:20vw;
+    height:30vh;
+    background: #fff;
+} */
+h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 5.8rem;
+    font-weight: 900;
+    background: #fff;
+    padding: 5px 15px;
+    letter-spacing: 5px;
+    mix-blend-mode: screen;
+}
