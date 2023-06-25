@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ping-pong</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="canvas-myfav">
+        <canvas id="mycanvas" width="400" height="600" style="border: 2px solid #f00;"></canvas>
+    </div>
+</body>
+<script>
+    const canvas = document.getElementById("mycanvas");
+    const context = canvas.getContext("2d");
+
+    const width = 400;
+    const height = 600;
+
+     canvas.width = width;
+     canvas.height = height;
+
+    //  paddle
+    let paddleWidth = 60;
+    let paddleHeight = 10;
+
+    //  create a rect
+    context.beginPath();
+    context.fillStyle="skyblue";
+    context.fillRect(0,0,width,height);
+    context.strokeStyle="orange";
+    context.stroke();
+    context.lineWidth=5;
+
+    // create a paddle top
+    context.beginPath();
+    context.roundRect(20, 5, 30, 20, 20);
+    context.fillStyle="yellow";
+    context.fillRect(170,2,paddleWidth,paddleHeight);
+
+
+    // create a paddle bottom
+    context.beginPath();
+    context.fillStyle="yellow";
+    context.fillRect(170,height - 12 ,paddleWidth,paddleHeight);
+
+    // center line
+    context.beginPath();
+    context.setLineDash([6]);
+    context.moveTo(0, height / 2);
+    context.lineTo(width,height / 2);
+    context.strokeStyle = "green";
+    context.stroke();
+
+    // create a circle
+    context.beginPath();
+    context.arc(width/2,height/2,15,2*Math.PI,false);
+    context.fillStyle = "red";
+    context.fill();
+
+    // players score
+    context.font = "32px roboto";
+    context.fillText(10, 20, height / 2 - 30);
+    context.fillText(22, 20, height / 2 + 50);
+
+</script>
+</html>
