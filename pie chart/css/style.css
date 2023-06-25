@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    background: rgb(235, 212, 184);
+}
+
+.main-div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-div {
+    width: calc(100vw - 40vw);
+    height: calc(100vh - 30vh);
+    box-shadow: 2px 2px 13px 0px #3b473b70, 1px 3px 10.53px -0.12rem #434b4d50, 0px 0px 20px 0px #4f464f30;
+    border: 1px solid #000;
+    background: #786;
+    position: relative;
+    padding: 22px;
+}
+.center-div h1{
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+    color: #061132;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* word-break: 2px; */
+    border-bottom: 2px dashed #f00;
+    padding: 18px 0px 20px 20px;
+}
+.center-div .text-aligntment{
+   margin-top: -7%;
+}
+.center-div .text-aligntment p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #ffe8e8;
+    text-transform: capitalize;
+    margin-right: 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.center-div span::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width:0.6rem;
+    height:0.6rem;
+    border-radius: 50%;
+    margin-left: 6px;
+    margin-top: -2px;
+    font-weight: 700;
+    background: currentColor;
+}
+.center-div h4{
+    font-size: 16px;
+    line-height: 17px;
+    color: #832300;
+    text-transform: capitalize;
+    font-style: italic;
+    position: absolute;
+    bottom: 16px;
+    left: 22px;
+}
+.pie-chart {
+    margin-top: 30px;
+    background: radial-gradient(circle closest-side, transparent 100%,#786 0),conic-gradient(from 180deg,
+    #950101 0,
+    #950101 30%,
+    #ff7b00 0,
+    #ff7b00 45%,
+    #0b4733 0,
+    #0b4733 60%,
+    #1961fd 0,
+    #1961fd 72%,
+    #2fbb00 0,
+    #2fbb00 82%,
+    #d228a2 0,
+    #d228a2 90%,
+    #3b1515 0,
+    #3b1515 100%); 
+    min-width: 200px;
+    min-height: 350px;
+}
+
