@@ -1,0 +1,130 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+body{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    line-height: 1;
+    background: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    width: 100%;
+    background-color: #786;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header input ~ label #btn-uniQue ,
+header input ~ label #cancel  {
+color: #fff;
+font-size: 3rem;
+float: right;
+margin-right: 40px;
+margin-top: 25px;
+cursor: pointer;
+display: none;
+}
+header #check {
+    display: none;
+}
+header nav .navbar-brand{
+    font-size: 4rem;
+    color: #2b1649;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 40px;
+}
+header nav ul{
+    float: right;
+    margin-right: 25px;
+    /* display: flex; */
+}
+header nav ul li{
+    display: inline-block;
+    margin: 0px 40px;
+}
+header nav ul li a{
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+    cursor: pointer;
+    padding: 7px 0px;
+}
+header nav ul li a::before{
+    position: absolute;
+    left: 0px;
+    content: '';
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: #158dea;
+    border-radius: 4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: 0.5s ease-in-out;
+}
+header nav ul li a:hover::before
+{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+@media(max-width:768px){
+    header nav .navbar-brand{
+        margin: 0 96px;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+    }
+    header nav .navbar-brand:hover{
+        color: rgb(0, 242, 255);
+    }
+    header input ~ label #btn-uniQue{
+        display: block;
+    }
+    header nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #05172b;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+    }
+    header nav ul li{
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    header nav ul li a{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    header #check:checked ~ nav ul {
+        left: 0%;
+    }
+    header #check:checked ~ label #btn-uniQue{
+        display: none;
+    }
+    header #check:checked ~ label #cancel{
+        display: block;
+    }
+}
