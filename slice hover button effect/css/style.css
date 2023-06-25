@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    background: rgb(42, 37, 31);
+}
+.center-div{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-div a{
+    font-size: 4rem;
+    line-height: 3.2rem;
+    color: #28619e;
+    padding: 3rem 5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: #e8b743;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition:0.5s ease-in-out;
+    overflow: hidden;
+}
+.center-div a:hover{
+    background-color: #0b470f;
+    color: #fff;
+}
+.center-div a::before{
+    content: '';
+    width: 100%;
+    height: 40%;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateX(-100%) rotate(45deg);
+    transition:0.5s ease-in-out;
+}
+.center-div a:hover::before{
+    transform: translateX(100%) rotate(45deg);
+
+}
