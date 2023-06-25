@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    background: rgb(235, 212, 184);
+}
+
+.main-div ul {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-div ul li {
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 5.8rem;
+    font-weight: 900;
+    color: #08042a;
+    letter-spacing: 5px;
+}
+
+.main-div * {
+    padding: 5px 0px;
+}
+
+.main-div ul li:nth-child(2n) {
+    color: #eb0808;
+}
+
+.main-div ul li:nth-child(2n+1) {
+    color: #11dfd9;
+}
+
+.main-div ul li:nth-child(3n) {
+    color: #40055f;
+}
+
+.main-div ul li:first-child {
+    color: rgb(2, 42, 30);
+}
+
+.main-div ul li:last-child {
+    color: #d2c402;
+}
+
+.main-div ul li:nth-child(3) {
+    color: #62004f;
+}
+
+/* .main-div ul li:not(:nth-child(4)){
+    color: #57d100;
+} */
+.main-div p {
+    font-size: 5rem;
+    line-height: 5.8rem;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.main-div p:last-of-type {
+    color: rgb(18, 81, 3);
+}
+
+.main-div a {
+    color: #158dea;
+    font-size: 14px;
+    line-height: 18px;
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 7px;
+    margin: 0 auto;
+    text-align: center;
+}
